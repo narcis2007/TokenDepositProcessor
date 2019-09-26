@@ -16,7 +16,7 @@ const User = require("./models/user.js")(sequelize, Sequelize.DataTypes);
 
 // User.sync({force:true});
 
-var tokenContract = new web3.eth.Contract(require('./BeerCoin.json'), process.env.TOKEN_ADDRESS);
+var tokenContract = new web3.eth.Contract(require('./ERC20ABI.json'), process.env.TOKEN_ADDRESS);
 
 
 async function processDepositConfirmations() {
